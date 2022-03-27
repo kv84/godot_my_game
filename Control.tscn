@@ -1,0 +1,89 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Control.gd" type="Script" id=1]
+[ext_resource path="res://art/image.jpg" type="Texture" id=2]
+[ext_resource path="res://art/image2.jpg" type="Texture" id=3]
+[ext_resource path="res://art/image3.jpg" type="Texture" id=4]
+[ext_resource path="res://art/image4.jpg" type="Texture" id=5]
+[ext_resource path="res://art/dialog_box.png" type="Texture" id=6]
+
+[sub_resource type="Theme" id=1]
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 160, 160 )
+margin_left = 90.0
+margin_right = 90.0
+margin_top = 45.0
+margin_bottom = 45.0
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Image1" type="TextureRect" parent="."]
+margin_top = -410.0
+margin_right = 1125.0
+margin_bottom = 2005.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Image2" type="TextureRect" parent="."]
+visible = false
+margin_left = 235.451
+margin_top = 158.088
+margin_right = 627.451
+margin_bottom = 478.088
+texture = ExtResource( 3 )
+
+[node name="Image3" type="TextureRect" parent="."]
+visible = false
+margin_left = 282.541
+margin_top = 100.907
+margin_right = 544.541
+margin_bottom = 423.907
+texture = ExtResource( 4 )
+
+[node name="Image4" type="TextureRect" parent="."]
+visible = false
+margin_left = 272.45
+margin_top = 171.543
+margin_right = 528.45
+margin_bottom = 491.543
+texture = ExtResource( 5 )
+
+[node name="Panel" type="Panel" parent="."]
+light_mask = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 457.0
+theme = SubResource( 1 )
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+margin_left = 20.0
+margin_top = 79.0
+margin_right = 1000.0
+margin_bottom = 134.0
+bbcode_text = "vcxvcbvbcvbv n "
+text = "vcxvcbvbcvbv n "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="Panel"]
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = 17.0
+margin_top = 14.0
+margin_right = 261.0
+margin_bottom = 55.0
